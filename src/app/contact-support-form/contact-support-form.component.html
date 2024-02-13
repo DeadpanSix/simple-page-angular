@@ -1,0 +1,67 @@
+<main class="main">
+  <h1>Contacto de soporte !</h1>
+  <section class="container">
+    <form class="form-fields" novalidate>
+      <section class="field-container">
+        <label for="fullName" class="form-label">
+          Nombre completo
+        </label>
+        <input type="text" class="form-control" id="fullName" value="">
+        <ng-template ngIf="form.get('fullName').errors?.required">
+          Favor de ingresar nombre completo.
+        </ng-template>
+      </section>
+
+        <section class="field-container">
+          <label for="businessName" class="form-label">
+            Nombre de la empresa
+          </label>
+          <input type="text" class="form-control" id="businessName" value="" 
+            required
+          >
+
+          <div ngIf="businessName.invalid" class="alert alert-danger">
+            <div ngIf="businessName.errors?.['required']">Nombre de la empresa es requerido.</div>
+          </div>
+        </section>
+
+        <section class="field-container">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email">
+        </section>
+            
+        <section class="split">
+          <section class="field-container">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="phone">
+          </section>
+
+            <section class="field-container">
+              <label for="category" class="form-label">Categoría</label>
+                <select  class="form-select" id="category">
+                  <option value="">Seleccionar una categoría</option>
+                  <!-- <option *ngFor="let cat of categories" [value]="cat.id">
+                    {{cat.name}}
+                  </option> -->
+                  <!-- <option value="1">Informativo</option>
+                  <option value="2">Problema</option> -->
+              </select>
+          </section>
+        </section>
+
+        <section class="field-container">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="text-form-control" id="message" 
+            placeholder="Escriba su mensaje" value="">
+          </textarea>
+        </section>
+        
+        <section class="button-container">
+          <button class="send-button" type="submit">
+            <i class="bi bi-send"></i>
+            Enviar
+          </button>
+        </section>
+      </form>
+  </section>
+</main>

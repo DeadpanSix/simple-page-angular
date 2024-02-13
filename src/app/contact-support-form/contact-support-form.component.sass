@@ -1,0 +1,116 @@
+$greenLime: rgb(165, 230, 0)
+$darkGreen: rgb(160, 220, 0)
+$white: white
+
+:host 
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.main > h1 
+  background-color: $greenLime
+  text-align: center
+  color: $white
+  font-weight: bold
+  margin: 0px
+  height: 80px
+  padding-bottom: 10px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.main > .container > .form-fields 
+  align-content: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding-top: 50px
+
+
+.main > .container > .form-fields > .field-container,
+.main > .container > .form-fields > .split > .field-container,
+.main > .container > .form-fields > .split > .form-select 
+  display: flex
+  flex-direction: column
+  width: 80vw
+  padding-bottom: 5px
+
+
+.main > .container > .form-fields > .split 
+  display: flex
+  flex-direction: row
+  width: 80vw
+
+
+.main > .container > .form-fields > .split > .field-container > .form-select 
+  border-radius: 5px
+  border: 1px solid gray
+  height: 35px
+  font-size: 13px
+
+
+.main > .container > .form-fields > .field-container > .form-label,
+.main > .container > .form-fields > .split > .field-container > .form-label 
+  padding: 5px
+  padding-left: 2px
+  font-weight: bold
+  font-size: 13px
+
+
+.main > .container > .form-fields > .field-container > .form-control,
+.main > .container > .form-fields > .split > .field-container > .form-control,
+.main > .container > .form-fields > .field-container > .text-form-control 
+  padding: 8px
+  padding-top: 0px
+
+
+.main > .container > .form-fields > .field-container > .text-form-control 
+  height: 50px
+
+
+.main > .container > .form-fields > .field-container > input,
+.main > .container > .form-fields > .field-container > textarea,
+.main > .container > .form-fields > .split > .field-container > input 
+  height: 35px
+  font-size: 13px
+  border-radius: 5px
+  border: 1px solid gray
+  padding: 2px
+
+
+.main > .container > .form-fields > .split > .field-container > input 
+  width: 38vw
+
+
+.main > .container > .form-fields > .button-container 
+  width: 80vw
+  padding-top: 10px
+
+
+.main > .container > .form-fields > .button-container > .send-button 
+  background-color: $darkGreen
+  color: $white
+  float: left
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: 90px
+  height: 30px
+  border-radius: 5px
+  border: 0px
+  font-size: 13px
+  font-weight: bold
+
+
+@media screen and (max-width: 650px) 
+  .main > .container > .form-fields > .split 
+    display: flex
+    flex-direction: column
+  
+
+  .main > .container > .form-fields > .split > .field-container > input 
+    width: 79vw
+  
